@@ -1,0 +1,160 @@
+:root {
+    /*prymary*/
+    
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+
+    /*neutral*/
+
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+    /*font*/
+
+    --principal-font: 'Inter', sans-serif;
+    --secondary-font: 'Lexend Deca', sans-serif;
+}
+
+
+
+/*globales*/
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  } /*resetear el boxsizing para que no se sumen los tamaños boxsizing*/
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    font-family: var(--principal-font);
+    font-size: 15px;
+    margin: 0;
+    background-color: var(--Very-dark-blue);
+    color: var(--Slightly-transparent-white);
+}
+
+img {
+    border-style: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    mix-blend-mode: multiply;
+}
+
+picture {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*tipografía*/
+
+h1 {
+    font-family: var(--principal-font);
+    font-weight: 700;
+    color: var(--White);
+    font-size: 3.5rem;
+}
+
+h1 span {
+    color: var(--Soft-violet);
+}
+
+h2 {
+    font-family: var(--principal-font);
+    font-weight: 700;
+    color: var(--White);
+}
+
+p {
+    font-family: var(--principal-font);
+    line-height: 2.3rem;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+
+
+.card-business {
+    margin: 3rem;
+}
+
+@media (min-width: 768px) {
+    .card-business {
+        max-width: 100rem;
+        margin: auto;
+    }
+}
+
+.card-content {
+    
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Dark-desaturated-blue);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+        .card-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15rem;
+        margin-bottom: 15rem;
+    }
+}
+
+.card-content {
+    display: flex;
+}
+
+.card-image {
+    background-color: var(--Soft-violet);
+}
+
+
+@media (min-width: 768px) {
+    .card-image {
+        width: 50%;
+        order: 2;
+    }
+}
+
+.card-text {
+    padding: 0 5rem;
+    text-align: start;
+}
+
+
+@media (min-width: 768px) {
+    .card-text {
+        width: 50%;
+    }
+}
+
+.card-numbers {
+    text-align: start;
+}
+
+
+@media (min-width: 768px) {
+    .card-numbers {
+        display: flex;
+        gap: 5rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.card-numbers-item p {
+    text-transform: uppercase;
+}
